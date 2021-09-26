@@ -5,7 +5,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-go@v2
@@ -13,7 +13,7 @@ jobs:
           go-version: '^1.16.0'
       - run: make build
   test:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-go@v2
